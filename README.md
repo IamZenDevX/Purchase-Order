@@ -3,7 +3,7 @@
 
 This project is a Purchase Order Management System that allows users to manage purchase orders and their corresponding items. The system tracks essential details of purchase orders, including related items, prices, and vendors.
 
-<h2 align="left"> Purpose and Overview</h2>
+<h2 align="left"> Purpose and Overview:</h2>
 
 The purpose of this system is to provide a centralized platform where businesses can create, edit, and manage purchase orders. It helps automate the procurement process, improving efficiency and reducing manual errors. Each purchase order contains detailed information about the products being purchased, as well as the vendors providing these products. The system also tracks inventory levels, prices, and product availability, allowing businesses to make data-driven purchasing decisions.
 
