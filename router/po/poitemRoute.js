@@ -11,6 +11,6 @@ router.get("/poitemget/idd/:idd",  getpoitem);
 
 router.post("/inPoItem",  insertitem);
 
-router.put("/poitemput",  putitem);
+router.put("/poitemput/poid/:poid",  putitem);
 
 module.exports = router;
