@@ -25,7 +25,7 @@ The **Purchase Order Management System** is highly scalable and customizable, ma
 | **Delete PO** | DELETE | http://localhost:2031/po/podel/id/:id | Request Params: `id:string` |
 | **Create a PoItem** | POST | http://localhost:2031/poitem/inPoItem |  Request Body:  `poid: string, item: string,description:string,rate:number,dod:date,remarks_detail:string` |
 | **Get PoItem** | Get | http://localhost:2031/poitem/poitemget/idd/:idd | Request Params:  `id:string`        |
-| **Update POItem** | PUT | http://localhost:2031/poitem/poitemput | Request Params:  `id:string`                                         Request Body: `poid: string, item: string,description:string,rate:number,dod:date,remarks_detail:string` |
+| **Update POItem** | PUT | http://localhost:2031/poitem/poitemput/poid/:poid | Request Params:  `id:string`                                         Request Body: `poid: string, item: string,description:string,rate:number,dod:date,remarks_detail:string` |
 | **Delete PoItem** | DELETE | http://localhost:2031/poitem/poitemdel | Request Params:  `id:string`   |
 
 <h2 align="left">Tools Used:</h2>
@@ -69,20 +69,18 @@ The platform will require a relational database to manage Purchase Order and Ite
 | party | String |
 | remarks | String |
 
-### b) PurchaseOrder_Item
+### b) PurchaseOrder_Item(change)
 
 | **Field Name** | **Type** |
 | --- | --- |
-| srno | String |
-| ProductID | String |
-| categoryID | Ref. Object → Category |
+| srno | Number |
+| item | String |
+| description | String |
 | name | String |
-| price | Number |
-| qTags | String |
-| providerID | Ref. Object → Provider |
-| stock | Number |
-| launchDate | Date |
-| status | String |
+| poid | Ref. Object → Po |
+| rate | Number |
+| dod | Date |
+| remarks_detail | String |
 
 <h2 align="left"> Use Cases</h2>
 
