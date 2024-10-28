@@ -25,7 +25,7 @@ The **Purchase Order Management System** is highly scalable and customizable, ma
 | **Delete PO** | DELETE | http://localhost:2031/po/podel/id/:id | Request Params: `id:string` |
 | **Create a PoItem** | POST | http://localhost:2031/poitem/inPoItem |  Request Body:  `poid: string, item: string,description:string,rate:number,dod:date,remarks_detail:string` |
 | **Get PoItem** | Get | http://localhost:2031/poitem/poitemget/idd/:idd | Request Params:  `id:string`        |
-| **Update POItem** | PUT | http://localhost:2031/poitem/poitemput/poid/:poid | Request Params:  `id:string`                                         Request Body: `poid: string, item: string,description:string,rate:number,dod:date,remarks_detail:string` |
+| **Update POItem** | PUT | http://localhost:2031/poitem/poitemput/poid/:poid | Request Params:  `poid:string`                                         Request Body: `poid: string, item: string,description:string,rate:number,dod:date,remarks_detail:string` |
 | **Delete PoItem** | DELETE | http://localhost:2031/poitem/poitemdel | Request Params:  `id:string`   |
 
 <h2 align="left">Tools Used:</h2>
