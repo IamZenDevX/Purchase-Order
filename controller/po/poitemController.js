@@ -46,21 +46,21 @@ exports.insertitem = async (req, res, next) => {
   res.save(createdPurchaseOrder_Item);
 };
 
-exports.putitem = async (req, res, next) => {
-  const { description, dod, item, poid, rate, remarks_detail, srno } = req.body;
-  const updatedPurchaseOrder_Item = await PurchaseOrder_Item.findByIdAndUpdate(
-    poid,
-    {
-      dod: dod,
-      description: description,
-      rate: rate,
-      item: item,
-      srno: srno,
-      poid: poid,
-      remarks_detail: remarks_detail,
-    },
-    { new: true }
-  );
-  //		updatedPurchaseOrder_Item
-  res.json(updatedPurchaseOrder_Item);
-};
+exports.putitem = async(req, res, next) => {
+const {description, dod, item, rate, remarks_detail, srno} = req.body;
+const {poid} = req.params;
+let updatedPurchaseOrder_Item;
+updatedPurchaseOrder_Item = await PurchaseOrder_Item.findByIdAndUpdate(poid,
+{
+dod: dod,
+description: description,
+rate: rate,
+item: item,
+srno: srno,
+remarks_detail: remarks_detail
+}
+, {new: true} );
+//		updatedPurchaseOrder_Item
+res.json(updatedPurchaseOrder_Item);
+
+}
